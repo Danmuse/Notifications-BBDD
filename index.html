@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" type="module" defer></script>
+    <title>Notifications BBDD</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <header class="header-container">
+        <div class="notification-passive-marker">
+          <h2 class="notification-title">Notifications</h2>
+          <div class="notification-marker-container">
+            <h4 class="notification-marker">3</h4>
+          </div>
+        </div>
+        <p class="active-marker">Mark all as read</p>
+      </header>
+      <article class="notifications-container">
+        <section class="notification-post unread">
+          <img
+            src="./assets/images/avatar-mark-webber.webp"
+            alt="Avatar picture"
+          />
+          <div class="notification-content-container">
+            <div class="notification-content">
+              <p class="notification-description">
+                <span class="span__clickable user-name">Mark Webber</span>
+                reacted to your recent post
+                <span class="span__clickable">My first tournament today!</span>
+              </p>
+              <div class="unread-active-marker"></div>
+            </div>
+            <p class="time-stamp">1m ago</p>
+          </div>
+        </section>
+        <section class="notification-follow unread">
+          <img
+            src="./assets/images/avatar-angela-gray.webp"
+            alt="Avatar picture"
+          />
+          <div class="notification-content-container">
+            <div class="notification-content">
+              <p class="notification-description">
+                <span class="span__clickable user-name">Angela Gray</span>
+                followed you
+              </p>
+              <div class="unread-active-marker"></div>
+            </div>
+            <p class="time-stamp">5m ago</p>
+          </div>
+        </section>
+        <section class="notification-group unread">
+          <img
+            src="./assets/images/avatar-jacob-thompson.webp"
+            alt="Avatar picture"
+          />
+          <div class="notification-content-container">
+            <div class="notification-content">
+              <p class="notification-description">
+                <span class="span__clickable user-name">Jacob Thompson</span>
+                has joined your group
+                <span class="span__clickable">Chess Club</span>
+              </p>
+              <div class="unread-active-marker"></div>
+            </div>
+            <p class="time-stamp">1 day ago</p>
+          </div>
+        </section>
+        <section class="notification-message">
+          <img
+            src="./assets/images/avatar-rizky-hasanuddin.webp"
+            alt="Avatar picture"
+          />
+          <div class="notification-content-container">
+            <div class="notification-content">
+              <p class="notification-description">
+                <span class="span__clickable user-name">Rizky Hasanuddin</span>
+                sent you a private message
+              </p>
+              <div class="unread-active-marker"></div>
+            </div>
+            <p class="time-stamp">5 days ago</p>
+            <div class="new-message-container">
+              <p class="new-message">
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="notification-comment unread">
+          <img
+            src="./assets/images/avatar-kimberly-smith.webp"
+            alt="Avatar picture"
+          />
+          <div class="notification-content-container">
+            <div class="notification-without-picture-commented">
+              <div class="notification-content">
+                <p class="notification-description">
+                  <span class="span__clickable user-name">Kimberly Smith</span>
+                  commented on your picture
+                </p>
+                <div class="unread-active-marker"></div>
+              </div>
+              <p class="time-stamp">1 week ago</p>
+            </div>
+            <img
+              class="picture-commented"
+              src="./assets/images/image-chess.webp"
+              alt="Notification picture"
+            />
+          </div>
+        </section>
+        <section class="notification-post">
+          <img
+            src="./assets/images/avatar-nathan-peterson.webp"
+            alt="Avatar picture"
+          />
+          <div class="notification-content-container">
+            <div class="notification-content">
+              <p class="notification-description">
+                <span class="span__clickable user-name">Nathan Peterson</span>
+                reacted to your recent post
+                <span class="span__clickable">
+                  5 end-game strategies to increase your win rate
+                </span>
+              </p>
+              <div class="unread-active-marker"></div>
+            </div>
+            <p class="time-stamp">2 weeks ago</p>
+          </div>
+        </section>
+        <section class="notification-group">
+          <img
+            src="./assets/images/avatar-anna-kim.webp"
+            alt="Avatar picture"
+          />
+          <div class="notification-content-container">
+            <div class="notification-content">
+              <p class="notification-description">
+                <span class="span__clickable user-name">Anna Kim</span>
+                left the group
+                <span class="span__clickable">Chess Club</span>
+              </p>
+              <div class="unread-active-marker"></div>
+            </div>
+            <p class="time-stamp">2 weeks ago</p>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

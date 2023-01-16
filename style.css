@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 500, 800;
+  font-size: 0.9rem;
+  src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+:root {
+  --unread-component-color: rgb(246, 83, 81);
+  --active-component-color: rgb(10, 49, 123);
+  --selection: rgb(175, 195, 225);
+
+  --background: rgb(244, 244, 247);
+  --background-notifications-panel: rgb(250, 250, 250);
+  --background-message-hover: rgb(239, 242, 246);
+  --box-shadow: rgb(221, 231, 238);
+  --border-message: rgb(209, 210, 212);
+  --secondary-text-color: rgb(229, 239, 250);
+  --very-light-text-color: rgb(147, 157, 174);
+  --light-text-color: rgb(94, 103, 120);
+  --primary-text-color: rgb(28, 32, 43);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  height: 99vh;
+}
+
+::selection {
+  background-color: var(--selection);
+}
+
+body {
+  background-color: var(--background);
+  font-family: 'Plus Jakarta Sans', 'Times New Roman', Times, serif;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Containers */
+
+.main-container {
+  margin: 2rem;
+  padding: 2rem;
+  min-width: 40rem;
+  max-width: 41rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px var(--box-shadow);
+  background-color: var(--background-notifications-panel);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notification-passive-marker {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notification-marker-container {
+  padding: 0 0.7rem;
+  border-radius: 0.5rem;
+  background-color: var(--active-component-color);
+  color: var(--secondary-text-color);
+}
+
+.notifications-container {
+  margin: 2rem 0 0;
+  display: grid;
+  grid-template: repeat(auto, fit-content) / (1, 1fr);
+  row-gap: 0.75rem;
+}
+
+/* Header Components */
+
+.notification-title,
+.notification-marker,
+.active-marker {
+  margin: 0.2rem 0;
+}
+
+.active-marker {
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.12s ease-in-out;
+}
+
+.active-marker:hover {
+  color: var(--active-component-color);
+  transition: all 0.12s ease-in-out;
+}
+
+.notifications-container section {
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.notification-content-container {
+  width: 100%;
+  display: block;
+}
+
+/* Notifications */
+
+.notifications-container section img {
+  margin-right: 1rem;
+  width: 50px;
+  align-self: flex-start;
+}
+
+.unread {
+  background-color: var(--background);
+}
+
+.unread-active-marker {
+  margin-top: 0.2rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--unread-component-color);
+  display: none;
+}
+
+.unread .unread-active-marker {
+  display: block;
+}
+
+.notification-description,
+.time-stamp {
+  margin: 0.15rem;
+  font-size: 0.9rem;
+  color: var(--light-text-color);
+}
+
+.notification-description {
+  line-height: 1.3rem;
+}
+
+.user-name {
+  margin-left: 0 !important;
+  color: var(--primary-text-color);
+}
+
+.time-stamp {
+  color: var(--very-light-text-color);
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+/* Notification message */
+
+.new-message-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 0.38rem;
+  border: 1px solid var(--border-message);
+  transition: all 0.2s ease-in-out;
+}
+
+.new-message-container:hover {
+  background-color: var(--background-message-hover);
+  transition: all 0.2s ease-in-out;
+}
+
+.new-message {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--light-text-color);
+}
+
+/* Notification comment */
+
+.notification-comment .notification-content-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.picture-commented {
+  margin-right: 0 !important;
+}
+
+/* Others */
+
+.span__clickable {
+  margin: auto 0.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.12s ease-in-out;
+}
+
+.span__clickable:hover {
+  color: var(--active-component-color);
+  transition: all 0.12s ease-in-out;
+}
